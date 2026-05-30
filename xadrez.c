@@ -25,13 +25,13 @@ int main() {
     // Movimento: 5 casas na diagonal
     // (Cima + Direita)
     // =========================
-    int contadorBispo = 1;
+    int contador_bispo = 1;
 
     printf("\n=== Movimento do Bispo ===\n");
 
-    while(contadorBispo <= 5) {
-        printf("Casa %d: Cima, Direita\n", contadorBispo);
-        contadorBispo++;
+    while(contador_bispo <= 5) {
+        printf("Casa %d: Cima, Direita\n", contador_bispo);
+        contador_bispo++;
     }
 
 
@@ -39,22 +39,45 @@ int main() {
     // RAINHA → Estrutura DO-WHILE
     // Movimento: 8 casas à esquerda
     // =========================
-    int contadorRainha = 1;
+    int contador_rainha = 1;
 
     printf("\n=== Movimento da Rainha ===\n");
 
     do {
-        printf("Casa %d: Esquerda\n", contadorRainha);
-        contadorRainha++;
+        printf("Casa %d: Esquerda\n", contador_rainha);
+        contador_rainha++;
 
-    } while(contadorRainha <= 8);
+    } while(contador_rainha <= 8);
+
+    // Nível Aventureiro - Movimentação do Cavalo
+    // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
+    // Um loop pode representar a movimentação horizontal e outro vertical.
+    
+    // =========================
+    // CAVALO → Loops Aninhados
+    // Movimento: 2 Baixo + 1 Esquerda
+    // =========================
+    int casas_baixo = 2;
+    
+    printf("\n=== Movimento do Cavalo ===\n");
+
+    for(i = 1; i <= 1; i++) { // loop externo (FOR)
+
+        int j = 1;
+
+        while(j <= casas_baixo) { // loop interno (WHILE)
+            printf("Baixo\n");
+            j++;
+        }
+
+        printf("Esquerda\n");
+    }
+    
 
     return 0;
 }
 
-// Nível Aventureiro - Movimentação do Cavalo
-    // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
-    // Um loop pode representar a movimentação horizontal e outro vertical.
+
 
     // Nível Mestre - Funções Recursivas e Loops Aninhados
     // Sugestão: Substitua as movimentações das peças por funções recursivas.
